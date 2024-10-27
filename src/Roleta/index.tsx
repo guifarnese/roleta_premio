@@ -1,4 +1,3 @@
-// src/components/Roleta/Roleta.js
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import Confetti from 'react-confetti';
@@ -47,13 +46,6 @@ const Roleta: React.FC = () => {
       setEscolhaAtual(produto);
       setProdutoSorteado({ nome: produto, imagem: imagensProdutos[produto] });
       setEstaGirando(false);
-
-      // Salva os dados no Airtable
-      localStorage.setItem('nomeJogador', nomeCompleto); // Salva o nome do jogador
-      localStorage.setItem('resultado', JSON.stringify({ nome: produto, imagem: imagensProdutos[produto] }));
-
-      // Salva os dados no Airtable
-      salvarResultado(nomeCompleto, produto); // Chama a função salvarResultado
     }, 3000);
   };
 
