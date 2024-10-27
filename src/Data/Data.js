@@ -28,7 +28,6 @@ function Data() {
   );
 }
 
-// Exporte a função salvarResultado para ser usada em outros componentes
 export const salvarResultado = (nomeCompleto, resultado) => {
   base('Untitled App').create({
     'Nome': nomeCompleto,
